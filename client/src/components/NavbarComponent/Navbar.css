@@ -1,0 +1,50 @@
+nav {
+    background: #c5cbe3;
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0%;
+    z-index: 10;
+}
+
+.nav_container {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    width: 25%;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.searchbar input {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    color: aliceblue;
+
+}
+.searchbar button{
+    background-color: transparent;
+    color:white
+}
+.season_list{
+    position: absolute;
+    border: 2px solid black;
+    padding: 5px;
+
+}

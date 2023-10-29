@@ -1,0 +1,25 @@
+.signin_container{
+    width: 30%;
+    margin: 0 auto;
+    position: relative;
+    top: 5rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+.signin_container h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.signin_container form{
+    display: flex;
+    flex-direction: column;
+}
+.signin_container form input{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.signin_container form button{
+    padding: 1rem;
+    margin-bottom: 1rem;
+}

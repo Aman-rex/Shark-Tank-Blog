@@ -1,12 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
-import Profile from "./pages/Profile"
-import About from "./pages/About";
+import Home from "./pages/homePage/Home";
+import SignIn from "./pages/SignInPage/SignIn";
+import SignUp from "./pages/SignUpPage/SignUp";
+import Profile from "./pages/ProfilePage/Profile"
+import About from "./pages/AboutPage/About";
+import Navbar from "./components/NavbarComponent/Navbar";
 export default function App() {
   return (
     <BrowserRouter>
+    <Navbar/>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/sign-in" element={<SignIn />}/>
