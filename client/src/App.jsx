@@ -5,6 +5,8 @@ import SignUp from "./pages/SignUpPage/SignUp";
 import Profile from "./pages/ProfilePage/Profile"
 import About from "./pages/AboutPage/About";
 import Navbar from "./components/NavbarComponent/Navbar";
+import { ToastContainer } from "react-toastify";
+import 'noty/lib/noty.css';
 export default function App() {
   return (
     <BrowserRouter>
@@ -16,6 +18,7 @@ export default function App() {
         <Route path="/profile" element={<Profile />}/>
         <Route path="/about" element={<About />}/>
       </Routes>
+      <ToastContainer/>
     </BrowserRouter>
   );
 }
