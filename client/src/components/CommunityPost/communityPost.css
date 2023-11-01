@@ -1,0 +1,17 @@
+.post_container{
+    padding: 1rem;
+border: 2px solid black;
+width: 50%;
+margin: 1rem auto;
+color: black;
+}
+.post_userinfo{
+    display: flex;
+    justify-content: space-between;
+}
+.post_userinfo .btn{
+color: aliceblue;
+font-size: small;
+padding: 5px;
+background-color: red;
+}

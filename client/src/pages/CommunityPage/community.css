@@ -1,0 +1,25 @@
+.community_page{
+    position: relative;
+    top: 5rem;
+}
+.community_page h1{
+    color: black;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.post-form-container{
+    width: 50%;
+    border: 2px solid black;
+    margin: 0 auto;   
+}
+
+.post-form-container input{
+    width: 80%;
+    padding: 1rem;
+}
+.post-form-container button{
+    width: 20%;
+    padding: 1rem;
+    background-color: lightcoral;
+    color: aliceblue;
+}
