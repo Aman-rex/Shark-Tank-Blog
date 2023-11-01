@@ -1,16 +1,39 @@
 import "./Navbar.css";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
 import { userSelector } from "../../redux/user/userSlice";
 import { useDispatch, useSelector } from 'react-redux';
+import { signOutSucess } from "../../redux/user/userSlice";
 export default function Navbar() {
+  const dispatch=useDispatch()
   const [dropdown, setdropdown] = useState(false);
   const {currentUser}=useSelector(userSelector)
 
   const handleDropdown = () => {
     setdropdown(!dropdown);
   };
+
+  const handleSignout=async()=>{
+    try{
+      const res = await fetch('/api/auth/signout')
+      const data=await res.json()
+      if(data.success===false){
+        console.log(data.message)
+      }
+      toast('SignOut Successful', {
+        position: 'top-right',
+        autoClose: 2000, 
+        type: 'Suceesfull', 
+      });
+      dispatch(signOutSucess())
+
+    }catch(error){
+
+    }
+  }
+
 
   return (
     <nav>
@@ -52,9 +75,10 @@ export default function Navbar() {
               ""
             )}
           </div>
-          <NavLink to={"/sign-in"}>
-            <li>{currentUser?currentUser.name:'Sign-in'}</li>
-          </NavLink>
+          {
+            currentUser?(<NavLink to={'/profile'}><li>{currentUser.name}</li></NavLink>):<NavLink to={'/sign-in'}>Sign-in</NavLink>
+          }
+          {currentUser?(<li onClick={handleSignout}>SignOut</li>):''}
         </ul>
       </div>
     </nav>
