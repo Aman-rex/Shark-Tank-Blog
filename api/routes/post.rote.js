@@ -6,4 +6,5 @@ const router=express.Router()
 
 router.post('/create',verifyToken,createPost)
 router.post('/likes/:id',verifyToken,like)
+router.post('/delete/:id',verifyToken,deletePost)
 export default router
