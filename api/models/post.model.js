@@ -11,7 +11,11 @@ const postSchema = new Schema(
         user:{
             type:mongoose.Schema.Types.ObjectId,
             ref:'User'
-        }
+        },
+        likes:[{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Like'
+        }]
     },{
         timestamps:true
     }
