@@ -3,7 +3,7 @@ import { errorHandler } from "../utils/error.js";
 import Like from "../models/likes.model.js";
 export const createPost = async(req, res,next) => {
   try {
-    console.log(req.user)
+
     const post = await Post.create(req.body)
     return res.status(200).json(post)
   } catch (error) {
