@@ -26,7 +26,13 @@ const blogSchema=new Schema({
     content:{
         type:String,
         required:true
+    },
+    user:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User'
     }
 
-
 })
+
+const Blog= mongoose.model('Blog',blogSchema)
+export default Blog
