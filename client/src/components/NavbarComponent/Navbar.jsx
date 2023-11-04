@@ -10,7 +10,7 @@ export default function Navbar() {
   const dispatch=useDispatch()
   const [dropdown, setdropdown] = useState(false);
   const {currentUser}=useSelector(userSelector)
-  console.log(currentUser)
+  const navigate =useNavigate()
   const handleDropdown = () => {
     setdropdown(!dropdown);
   };
@@ -28,7 +28,7 @@ export default function Navbar() {
         type: 'Suceesfull', 
       });
       dispatch(signOutSucess())
-
+      navigate('/')
     }catch(error){
 
     }

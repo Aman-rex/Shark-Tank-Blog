@@ -3,5 +3,8 @@ import { Outlet,Navigate } from "react-router-dom"
 import { userSelector } from "../redux/user/userSlice"
 export const AdminRouter=()=>{
     const {currentUser}=useSelector(userSelector)
-    return currentUser.role=='Admin'?<Outlet/>:<Navigate to='/'/>
+    if(currentUser){
+        return currentUser.role=='Admin'?<Outlet/>:<Navigate to='/'/>
+    }
+    return <Navigate to='/'/>
 }
