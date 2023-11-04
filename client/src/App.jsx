@@ -7,7 +7,9 @@ import About from "./pages/AboutPage/About";
 import Community from "./pages/CommunityPage/community";
 import Navbar from "./components/NavbarComponent/Navbar";
 import { ToastContainer } from "react-toastify";
+import { AdminRouter } from "./components/UserRouter";
 import 'noty/lib/noty.css';
+import Admin from "./pages/AdminPage/Admin";
 export default function App() {
   return (
     <BrowserRouter>
@@ -18,6 +20,10 @@ export default function App() {
         <Route path="/sign-up" element={<SignUp />}/>
         <Route path="/profile" element={<Profile />}/>
         <Route path="/about" element={<Community />}/>
+
+        <Route element={<AdminRouter/>}>
+        <Route path="/admin" element={<Admin/>}></Route>
+        </Route>
       </Routes>
       <ToastContainer/>
     </BrowserRouter>

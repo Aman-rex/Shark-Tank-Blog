@@ -14,6 +14,7 @@ export default function CommunityPost({ post,getListing }) {
         const data= await res.json()
         if(data.success==false){
             console.log(data.message)
+            return
         }
         setPostData(data)
     }catch(error){
@@ -36,6 +37,7 @@ export default function CommunityPost({ post,getListing }) {
       const data=await res.json()
       if(data.success==false){
         console.log(data.message)
+        return
       }
       await fetchPostData()
       console.log("Comment added succefully")
@@ -60,6 +62,7 @@ export default function CommunityPost({ post,getListing }) {
         const data= await res.json()
         if(data.success==false){
             console.log(data.message)
+            return
         }
         await fetchPostData()
         console.log('Comment deleted Successfully')
@@ -101,6 +104,7 @@ export default function CommunityPost({ post,getListing }) {
        const data= await res.json()
        if(data.success==false){
         console.log(data.message)
+        return
        }
        await getListing()
        console.log('Post deleted Sucessfully')

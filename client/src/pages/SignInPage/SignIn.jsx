@@ -46,6 +46,11 @@ export default function SignIn() {
         type: 'Suceesfull', 
       });
       dispatch(signInSuccess(data))
+      console.log(data)
+      if(data.role=='Admin'){
+        naviagte('/admin')
+        return
+      }
       naviagte('/')
 
     }catch(error){

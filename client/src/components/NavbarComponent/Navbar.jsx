@@ -10,7 +10,7 @@ export default function Navbar() {
   const dispatch=useDispatch()
   const [dropdown, setdropdown] = useState(false);
   const {currentUser}=useSelector(userSelector)
-
+  console.log(currentUser)
   const handleDropdown = () => {
     setdropdown(!dropdown);
   };
